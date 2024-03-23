@@ -1,0 +1,16 @@
+.all-manu {
+  gap: 20px;
+}
+.all-manu .nav-link:last-child {
+  background-color: #7952b3;
+  color: white;
+  padding: 10px 35px !important;
+  border-radius: 6px;
+}
+header img {
+  width: 70px;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,12 @@
+.footer-area {
+  padding: 35px 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+.footer-area img {
+  width: 90px;
+}
+.footer-area p {
+  margin-bottom: 0;
+}
