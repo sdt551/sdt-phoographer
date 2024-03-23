@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 
 function Service({ item }) {
   return (
-    <Col lg={4}>
+    <Col lg={4} md={3} sm={6}>
       <h3>{item.name}</h3>
       <p>{item.des}</p>
       <Button variant="secondary">Photography</Button>
