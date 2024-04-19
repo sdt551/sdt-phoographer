@@ -11,9 +11,8 @@ function AllMoment() {
     setData({ img, index });
   };
   const imgAction = (action) => {
-    let i = data.index;
     if (!action) {
-      setData({ img: "", i: 0 });
+      setData({ img: "", index: 0 });
     }
   };
 
