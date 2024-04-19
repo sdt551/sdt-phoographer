@@ -1,40 +1,29 @@
-import React from "react";
-import { Col, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import { Row } from "react-bootstrap";
 import Moment from "./Moment";
-import M1 from "./img/m1.jpg";
-import M2 from "./img/m2.jpg";
-import M3 from "./img/m3.jpg";
-import M4 from "./img/m4.jpg";
 import "./AllMoment.css";
+import { allImgArr } from "./AllImgArr";
+import SelectedImg from "./SelectedImg";
 
 function AllMoment() {
+  const [data, setData] = useState({ img: "", index: 0 });
+  const getData = (img, index) => {
+    setData({ img, index });
+  };
+  const imgAction = (action) => {
+    let i = data.index;
+    if (!action) {
+      setData({ img: "", i: 0 });
+    }
+  };
+
   return (
     <div className="AllImg">
       <Row>
-        <Col lg={3}>
-          <Moment img={M1} />
-        </Col>
-        <Col lg={3}>
-          <Moment img={M2} />
-        </Col>
-        <Col lg={3}>
-          <Moment img={M3} />
-        </Col>
-        <Col lg={3}>
-          <Moment img={M4} />
-        </Col>
-        <Col lg={3}>
-          <Moment img={M3} />
-        </Col>
-        <Col lg={3}>
-          <Moment img={M1} />
-        </Col>
-        <Col lg={3}>
-          <Moment img={M2} />
-        </Col>
-        <Col lg={3}>
-          <Moment img={M4} />
-        </Col>
+        {data.img && <SelectedImg img={data.img} imgAction={imgAction} />}
+        {allImgArr.map((img, index) => (
+          <Moment singleImg={img} key={index} index={index} getData={getData} />
+        ))}
       </Row>
     </div>
   );
