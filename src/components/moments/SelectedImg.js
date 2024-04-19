@@ -16,7 +16,7 @@ function SelectedImg({ img, imgAction }) {
             position: "absolute",
             color: "red",
             top: "10px",
-            right: "20px",
+            right: "0px",
           }}
           onClick={() => ingAction()}
         >
